@@ -1,0 +1,33 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
+repo = 'cohama/vim-smartinput-endwise'
+
+[[plugins]]
+repo = 'cohama/vim-smartinput-endwise'
+
+[[plugins]]
+repo = 'fholgado/minibufexpl.vim'
+
+[[plugins]]
+repo = 'QuickBuf'
+
+# colorschem
+[[plugins]] # solarized
+repo = 'altercation/vim-colors-solarized'

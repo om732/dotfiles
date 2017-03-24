@@ -1,0 +1,46 @@
+[user]
+    name = om732
+    email = hal.net.ver.g@gmail.com
+
+[push]
+    default = current
+
+[core]
+    editor = vim
+    compression = 0
+    precomposeunicode = true
+    mergeoptions = --no-edit
+
+[url "https://"]
+    insteadOf = git://
+
+[merge]
+    ff = false
+
+[alias]
+    s  = status
+    st = status
+    ss = status -s
+
+    a  = add
+    ad = add
+    c  = commit
+    cm = commit -m
+
+    b  = branch -a
+    br = branch -r
+
+    co = checkout
+    cb = checkout -b
+    develop = checkout develop
+    master  = checkout master
+
+    d  = diff
+
+    l  = log
+
+    p  = push
+[pull]
+    ff = only
+[ghq]
+    root = ~/Work/project
