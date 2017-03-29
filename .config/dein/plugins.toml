@@ -31,6 +31,9 @@ repo = 'QuickBuf'
 [[plugins]]
 repo = 'scrooloose/syntastic'
 
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
 # colorschem
 [[plugins]] # solarized
 repo = 'altercation/vim-colors-solarized'
