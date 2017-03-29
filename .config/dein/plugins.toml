@@ -28,6 +28,9 @@ repo = 'fholgado/minibufexpl.vim'
 [[plugins]]
 repo = 'QuickBuf'
 
+[[plugins]]
+repo = 'scrooloose/syntastic'
+
 # colorschem
 [[plugins]] # solarized
 repo = 'altercation/vim-colors-solarized'
