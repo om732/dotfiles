@@ -34,6 +34,9 @@ repo = 'scrooloose/syntastic'
 [[plugins]]
 repo = 'mattn/emmet-vim'
 
+[[plugins]]
+repo = 'jwalton512/vim-blade'
+
 # colorschem
 [[plugins]] # solarized
 repo = 'altercation/vim-colors-solarized'
