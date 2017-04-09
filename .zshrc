@@ -137,17 +137,17 @@ alias sudo='sudo '
 alias -g L='| less'
 alias -g G='| grep'
 
-if [ `which gsed` ]; then
+if [ `which gsed > /dev/null 2>&1; echo $?` -eq 0 ]; then
     alias bsed='/usr/bin/sed'
     alias sed='gsed'
 fi
 
-if [ `which gdate` ]; then
+if [ `which gdate > /dev/null 2>&1; echo $?` -eq 0 ]; then
     alias bdate='/bin/date'
     alias date='gdate'
 fi
 
-if [ `which nvim` ]; then
+if [ `which nvim > /dev/null 2>&1; echo $?` -eq 0 ]; then
     alias vim='nvim'
 fi
 
