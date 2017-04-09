@@ -43,13 +43,14 @@ M2_HOME=$HOME/tool/apache-maven
 
 # java
 #JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # php composer
 export COMPOSER_HOME=$HOME/.config/composer
 
 # PATHの設定
-PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$JAVA_HOME/bin:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$PATH
+#PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$JAVA_HOME/bin:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$PATH
+PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$PATH
 
 # rbenvの初期化
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
