@@ -29,8 +29,8 @@ mkdir .viminfo
 
 create_link .vimrc
 create_link .tmux.conf
+create_link .zshenv
 create_link .zshrc
-create_link .zprofile
 create_link .gitconfig
 create_link .peco
 create_link .config
