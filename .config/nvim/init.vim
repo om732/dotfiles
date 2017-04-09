@@ -124,15 +124,9 @@ match ZenkakuSpace /　/
 " status line
 "----------
 " ステータスラインのハイライト
-" normal mode: blue
-" insert mode: yellow
-"hi StatusLine ctermfg=White ctermbg=Blue cterm=none
-"au InsertEnter * hi StatusLine ctermfg=Black ctermbg=yellow cterm=none
-"au InsertLeave * hi StatusLine ctermfg=White ctermbg=Blue cterm=none
-"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-"set statusline=%F:\ \ %{GetFunc()}%=%l/%L%11p%%
-" syntax check
-"autocmd BufEnter,BufWritePost * call ErrorCheckStatusline()
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 
 "----------
 " filetype

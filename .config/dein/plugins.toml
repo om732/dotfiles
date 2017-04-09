@@ -40,3 +40,7 @@ repo = 'jwalton512/vim-blade'
 # colorschem
 [[plugins]] # solarized
 repo = 'altercation/vim-colors-solarized'
+
+# statusline
+[[plugins]]
+repo = 'itchyny/lightline.vim'
