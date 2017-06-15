@@ -32,5 +32,7 @@ create_link .tmux.conf
 create_link .zshenv
 create_link .zshrc
 create_link .gitconfig
+create_link .gitconfig-work
+create_link .gitconfig-private
 create_link .peco
 create_link .config
