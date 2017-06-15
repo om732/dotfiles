@@ -265,3 +265,14 @@ function peco-select-gitadd() {
 }
 zle -N peco-select-gitadd
 bindkey "^g^a" peco-select-gitadd
+
+# phpbrew
+if [ -f "$HOME/.phpbrew/bashrc" ]; then
+    source $HOME/.phpbrew/bashrc
+fi
+
+# rbenvの初期化
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# pyenvの初期化
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

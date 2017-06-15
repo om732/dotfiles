@@ -48,15 +48,14 @@ M2_HOME=$HOME/tool/apache-maven
 # php composer
 export COMPOSER_HOME=$HOME/.config/composer
 
+export ICU4U_HOME=/usr/local/opt/icu4c
+
+export LIBXML2_HOME=/usr/local/opt/libxml2
+
+
 # PATHの設定
 #PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$JAVA_HOME/bin:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$PATH
-PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$PATH
-
-# rbenvの初期化
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# pyenvの初期化
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$ICU4U_HOME/bin:$ICU4U_HOME/sbin:$LIBXML2_HOME/bin:$PATH
 
 # goの初期化
 if [ -x "`which go`" ]; then
@@ -65,7 +64,3 @@ if [ -x "`which go`" ]; then
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
-# phpbrew
-if [ -f "$HOME/.phpbrew/bashrc" ]; then
-    source $HOME/.phpbrew/bashrc
-fi
