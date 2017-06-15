@@ -1,3 +1,9 @@
+[includeIf "gitdir:~/Work/project/work"]
+    path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/Work/project/private"]
+    path = ~/.gitconfig-private
+
 [user]
     name = om732
     email = hal.net.ver.g@gmail.com
@@ -10,6 +16,7 @@
     compression = 0
     precomposeunicode = true
     mergeoptions = --no-edit
+	excludesfile = ~/.gitignore_global
 
 [url "https://"]
     insteadOf = git://
