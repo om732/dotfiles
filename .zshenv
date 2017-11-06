@@ -29,38 +29,55 @@ export XDG_CONFIG_HOME=~/.config
 
 # rbenvのhomeディレクトリ
 RBENV_HOME=$HOME/.rbenv
+if [ -e "$RBENV_HOME" ]; then
+    PATH=$RBENV_HOME/bin:$PATH
+fi
 
 # pyenvのhomeディレクトリ
 PYENV_HOME=$HOME/.pyenv
+if [ -e "$PYENV_HOME" ]; then
+    PATH=$PYENV_HOME/bin:$PATH
+fi
 
-# node_module PATH
-#NODE_MODULES_HOME=$HOME/node_modules
-NODEBREW_HOME=$HOME/.nodebrew/current/bin
+# nodebrew PATH
+NODEBREW_HOME=$HOME/.nodebrew/current
+if [ -e "$NODEBREW_HOME" ]; then
+    PATH=$NODEBREW_HOME/bin:$PATH
+fi
 
 # maven
-#M2_HOME=$HOME/tool/apache-maven-3.2.5
 M2_HOME=$HOME/tool/apache-maven
+if [ -e "$M2_HOME" ]; then
+    PATH=$M2_HOME/bin:$PATH
+fi
 
 # java
-#JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$(/usr/libexec/java_home)
+if [ -e "$JAVA_HOME" ]; then
+    PATH=$JAVA_HOME/bin:$PATH
+fi
 
 # php composer
 export COMPOSER_HOME=$HOME/.config/composer
 
 export ICU4U_HOME=/usr/local/opt/icu4c
+if [ -e "$ICU4U_HOME" ]; then
+    PATH=$ICU4U_HOME/bin:$PATH
+fi
 
 export LIBXML2_HOME=/usr/local/opt/libxml2
-
-
-# PATHの設定
-#PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$JAVA_HOME/bin:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$PATH
-PATH=$NODEBREW_HOME:$HOME/local/bin:$RBENV_HOME/bin:$NODE_MODULES_HOME/bin:$M2_HOME/bin:$PYENV_HOME:$COMPOSER_HOME/vendor/bin:/usr/local/bin:$ICU4U_HOME/bin:$ICU4U_HOME/sbin:$LIBXML2_HOME/bin:$PATH
+if [ -e "$LIBXML2_HOME" ]; then
+    PATH=$LIBXML2_HOME/bin:$PATH
+fi
 
 # goの初期化
 if [ -x "`which go`" ]; then
-    export GOROOT=`go env GOROOT`
-    export GOPATH=$HOME/.golocal
-    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+    export GOPATH=$HOME/go
+    PATH=$GOPATH/bin:$PATH
 fi
 
+# GOOGLE CLOUD SDK
+GOOGLE_CLOUD_SDK_HOME=~/.google-cloud-sdk
+if [ -e "$GOOGLE_CLOUD_SDK_HOME" ]; then
+    PATH=$GOOGLE_CLOUD_SDK_HOME/bin:$PATH
+fi
