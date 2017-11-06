@@ -20,9 +20,6 @@ repo = 'kana/vim-smartinput'
 repo = 'cohama/vim-smartinput-endwise'
 
 [[plugins]]
-repo = 'cohama/vim-smartinput-endwise'
-
-[[plugins]]
 repo = 'fholgado/minibufexpl.vim'
 
 [[plugins]]
