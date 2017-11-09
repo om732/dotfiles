@@ -77,7 +77,13 @@ if [ -x "`which go`" ]; then
 fi
 
 # GOOGLE CLOUD SDK
-GOOGLE_CLOUD_SDK_HOME=~/.google-cloud-sdk
+GOOGLE_CLOUD_SDK_HOME=$HOME/tool/google-cloud-sdk
 if [ -e "$GOOGLE_CLOUD_SDK_HOME" ]; then
     PATH=$GOOGLE_CLOUD_SDK_HOME/bin:$PATH
+fi
+
+# GOOGLE APP ENGINE  SDK
+GOOGLE_APP_ENGINE_SDK_HOME=$HOME/tool/go_appengine
+if [ -e "$GOOGLE_APP_ENGINE_SDK_HOME" ]; then
+    PATH=$GOOGLE_APP_ENGINE_SDK_HOME:$PATH
 fi
