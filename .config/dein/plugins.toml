@@ -41,7 +41,3 @@ repo = 'altercation/vim-colors-solarized'
 # statusline
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-
-# vim-go
-[[plugins]]
-repo = 'fatih/vim-go'
