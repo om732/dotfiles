@@ -188,6 +188,7 @@ case ${OSTYPE} in
             export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
             export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
         fi
+        alias zcat='gzcat'
         ;;
     linux*)
         #Linux用の設定
@@ -276,3 +277,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # pyenvの初期化
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
