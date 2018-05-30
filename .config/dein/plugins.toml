@@ -23,16 +23,16 @@ repo = 'cohama/vim-smartinput-endwise'
 repo = 'fholgado/minibufexpl.vim'
 
 [[plugins]]
-repo = 'QuickBuf'
-
-[[plugins]]
-repo = 'scrooloose/syntastic'
-
-[[plugins]]
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'jwalton512/vim-blade'
+
+[[plugins]]
+repo = 'vim-scripts/QuickBuf'
+
+[[plugins]]
+repo = 'w0rp/ale'
 
 # colorschem
 [[plugins]] # solarized
