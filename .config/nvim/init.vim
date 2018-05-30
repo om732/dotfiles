@@ -125,8 +125,17 @@ match ZenkakuSpace /　/
 "----------
 " ステータスラインのハイライト
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
+  \'active': {
+  \  'left': [
+  \    ['mode', 'paste'],
+  \    ['readonly', 'filename', 'modified', 'ale'],
+  \  ]
+  \},
+  \'component_function': {
+  \  'ale': 'ALEGetStatusLine'
+  \},
+  \'colorscheme': 'solarized'
+  \ }
 
 "----------
 " filetype
@@ -173,6 +182,7 @@ inoremap <C-c> <Esc>
 " dein
 "----------
 " dein {{{
+let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
 let g:cache_home = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let g:config_home = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
 let s:dein_cache_dir = g:cache_home . '/dein'

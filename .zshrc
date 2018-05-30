@@ -196,52 +196,14 @@ case ${OSTYPE} in
         ;;
 esac
 
+
 ########################################
 # peco
 
-### 履歴検索をpecoで実施
-#function peco-select-history() {
-#    local tac
-#    if which tac > /dev/null; then
-#        tac="tac"
-#    else
-#        tac="tail -r"
-#    fi
-#    BUFFER=$(\history -n 1 | \
-#        eval $tac | \
-#        peco --query "$LBUFFER")
-#    CURSOR=$#BUFFER
-#    zle clear-screen
-#}
-#zle -N peco-select-history
-#bindkey '^r' peco-select-history
-
-### ディレクトリ移動
-#function peco-cdr() {
-#    local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
-#    if [ -n "$selected_dir" ]; then
-#        BUFFER="cd ${selected_dir}"
-#        zle accept-line
-#    fi
-#    zle clear-screen
-#}
-#zle -N peco-cdr
-#bindkey '^o' peco-cdr
-
-
-########################################
-# go
-#let g:syntastic_mode-map = { mode: 'passive', active_filetypes: ['go'] }
-#let g:syntastic_go_checkers = ['go', 'golint']
-
-# vim:set ft=zsh:
-# End of lines added by compinstall
-#
 fpath=(~/.peco/anyframe(N-/) $fpath)
 
 autoload -Uz anyframe-init
 anyframe-init
-
 
 ### 履歴検索をpecoで実施
 bindkey '^r' anyframe-widget-put-history
@@ -249,23 +211,8 @@ bindkey '^r' anyframe-widget-put-history
 ### git管理レポジトリに移動
 bindkey '^]' anyframe-widget-cd-ghq-repository
 
-### Gitブランチを切り替える
-bindkey '^g^b' anyframe-widget-checkout-git-branch
-
-### pecoでgit addする
-function peco-select-gitadd() {
-    local SELECTED_FILE_TO_ADD="$(git status --porcelain | \
-                                  peco --query "$LBUFFER" | \
-                                  awk -F ' ' '{print $NF}')"
-    if [ -n "$SELECTED_FILE_TO_ADD" ]; then
-      BUFFER="git add $(echo "$SELECTED_FILE_TO_ADD" | tr '\n' ' ')"
-      CURSOR=$#BUFFER
-    fi
-    zle accept-line
-    # zle clear-screen
-}
-zle -N peco-select-gitadd
-bindkey "^g^a" peco-select-gitadd
+########################################
+# xxenv
 
 # phpbrew
 if [ -f "$HOME/.phpbrew/bashrc" ]; then
@@ -283,4 +230,4 @@ if which goenv > /dev/null; then eval "$(goenv init -)"; fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-[[ -s "/Users/ogawa-masaki/.gvm/scripts/gvm" ]] && source "/Users/ogawa-masaki/.gvm/scripts/gvm"
+[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
