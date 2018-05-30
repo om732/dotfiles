@@ -278,4 +278,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # pyenvの初期化
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# goenvの初期化
+if which goenv > /dev/null; then eval "$(goenv init -)"; fi
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+[[ -s "/Users/ogawa-masaki/.gvm/scripts/gvm" ]] && source "/Users/ogawa-masaki/.gvm/scripts/gvm"
