@@ -170,6 +170,7 @@ if has("autocmd")
   autocmd FileType go         setlocal sw=4 sts=4 ts=4 et
   autocmd FileType tf         setlocal sw=2 sts=2 ts=2 et
   autocmd FileType ansible    setlocal sw=2 sts=2 ts=2 et
+  autocmd FileType vue        setlocal sw=2 sts=2 ts=2 et
 endif
 
 "----------
@@ -219,6 +220,7 @@ if dein#load_state(s:dein_cache_dir)
     call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
     call dein#load_toml(s:toml_dir . '/plugins_python.toml', {'lazy': 1})
     call dein#load_toml(s:toml_dir . '/plugins_go.toml', {'lazy': 1})
+    call dein#load_toml(s:toml_dir . '/plugins_vue.toml', {'lazy': 1})
     if has('nvim')
         call dein#load_toml(s:toml_dir . '/neovim.toml', {'lazy': 1})
     endif
