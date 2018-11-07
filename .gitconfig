@@ -12,7 +12,7 @@
     default = current
 
 [core]
-    editor = vim
+    editor = nvim
     compression = 0
     precomposeunicode = true
     mergeoptions = --no-edit
